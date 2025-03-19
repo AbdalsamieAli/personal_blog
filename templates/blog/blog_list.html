@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+
+{% if blogs %}
+<div class="container vh-100 d-flex flex-column justify-content-between">
+    <div>
+
+    <form method="get">
+        <div class="input-group m-4 w-50">
+            <input type="text" class="form-control" name="q">
+            <button class="input-group-text" type="submit">Search</button>
+        </div>
+    </form>
+
+    <ul>
+        {% for blog in blogs %}
+        <li class="card m-2 border p-3">
+            <div class="mb-0">
+                <a class="fs-3 text-dark" href="{% url 'detail' blog.id %} ">
+                    {{ blog.blog_title|title }}
+                </a>
+                <div class="">{{ blog.blog_date|date:"d M, Y" }}</div>
+            </div>
+            <div class="card-body mt-0 pt-0">
+
+                <p class="card-text">{{ blog.blog_content|truncatewords:20 }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    </div>
+
+
+    {% if is_paginated %}
+    <div>
+
+        {% if not page_obj.has_previous %}
+        <a href="?page={{ page_obj.number }}" class="btn border">Newer</a>
+        {% endif %}
+
+
+        {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}" class="btn border">Newer</a>
+        {% endif %}
+
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="btn border">Older</a>
+        {% endif %}
+
+    </div>
+    {% endif %}
+</div>
+{% endif %}
+
+
+{% endblock %}

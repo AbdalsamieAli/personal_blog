@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<div class="container p-4">
+    <div class="d-flex flex-column justify-content-center align-items-center my-4">
+    <img src="{{ profiles.first.image.url }}" width="400"/>
+        <p class="fs-3 fw-bold my-2">{{ profiles.first.email}}</p>
+    </div>
+    {% if contacts %}
+    <ul class="nav justify-content-evenly">
+        {% for contact in contacts %}
+        <li class="">
+            <img class="bg-dark rounded-circle" src="{{ contact.icon.url }}" width="30" alt="{{ contact.network }}">
+            <a href="{{ contact.url }}">{{ contact.username }} </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+</div>
+
+{% endblock %}

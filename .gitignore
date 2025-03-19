@@ -1,0 +1,126 @@
+# Django-specific files
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# IDE-specific files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Python cache and build files
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# OS-specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Node.js and frontend dependencies (if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage and testing
+.coverage
+htmlcov/
+.pytest_cache/
+# Cache file creation bug
+## Ignore node_modules directory
+static/node_modules/
+*/static/node_modules/*
+# Ignore dependency directories
+static/*
+
+
+# Ignore npm debug logs
+staic/npm-debug.log*
+
+# Ignore yarn debug logs
+static/yarn-debug.log*
+static/yarn-error.log*
+
+# Ignore build directories
+static/dist/
+static/build/
+
+# Ignore local environment files
+.env
+.env.local
+.env.*.local
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Ignore OS generated files
+*.DS_Store
+*.DS_Store?
+*._*
+*.Spotlight-V100
+*.Trashes
+*ehthumbs.db
+*Thumbs.db
+
+.idea/$CACHE_FILE$
+
+# CodeStream plugin
+# https://plugins.jetbrains.com/plugin/12206-codestream
+.idea/codestream.xml
+
+# Azure Toolkit for IntelliJ plugin
+# https://plugins.jetbrains.com/plugin/8053-azure-toolkit-for-intellij
+.idea/**/azureSettings.xml
+
+
+db.sqlite3
+*/__pycache__/
