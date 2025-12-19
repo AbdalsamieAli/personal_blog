@@ -132,6 +132,3 @@ Personal project built to practice Django and web development.
 ## 📄 License
 
 This project is for learning and personal use.
-
-
-Just tell me 👍
