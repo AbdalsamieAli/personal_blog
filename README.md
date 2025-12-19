@@ -26,10 +26,10 @@ The project focuses on learning Django fundamentals such as models, views, templ
 ```
 personal-blog/
 │
-├── blog/            # Blog app
-├── users/           # User authentication app (if applicable)
-├── templates/       # HTML templates
-├── static/          # CSS, JS, images
+├── blog/            
+├── personal_blog/           
+├── profile_app/       
+├── templates/          
 ├── manage.py
 └── requirements.txt
 ```
